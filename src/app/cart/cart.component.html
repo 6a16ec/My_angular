@@ -1,0 +1,9 @@
+<h1>What to buy</h1>
+
+<div><input type="text" placeholder="Enter your ingredient" [formControl]="ingredientInput" (keydown.enter)="addIngredient()"></div>
+
+<ul>
+    <li *ngFor="let ingredient of ingredients">
+      <singleIngredient [ingredient]="ingredient" (deleteEvent)="onDelete(ingredient)"></singleIngredient>
+    </li>
+</ul>
